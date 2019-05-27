@@ -17,8 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework_jwt.views import obtain_jwt_token
 
-
 from meiduo_admin.views.data_views import *
+from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
 from meiduo_admin.views.specs_views import SPUSpecView
 from meiduo_admin.views.spu_views import SPUView, BrandSimpleView, SPUCategoryView
 from meiduo_admin.views.user_views import *
@@ -66,5 +66,12 @@ urlpatterns = [
     url(r'^goods/specs/$', SPUSpecView.as_view({'get': 'list', 'post': 'create'})),
     # 删除,获取,更新一个SPU规格信息
     url(r'^goods/specs/(?P<pk>\d+)/$', SPUSpecView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
+    # 获取,新增规格选项信息
+    url(r'^specs/options/$', SpecOptView.as_view({'get': 'list', 'post': 'create'})),
+    # 获取,删除,修改一个规格选项信息
+    url(r'^specs/options/(?P<pk>\d+)/$',
+        SpecOptView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
+    # 获取SPU规格的简单信息
+    url(r'^goods/specs/simple/$', SPUSpecSimpleView.as_view()),
 
 ]
