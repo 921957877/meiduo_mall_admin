@@ -78,7 +78,7 @@ def get_detail_html(sku):
 if __name__ == '__main__':
     sys.path.insert(0, '../')
     # 加载django配置
-    os.environ["DJANGO_SETTINGS_MODULE"] = "meiduo_mall.settings.dev"
+    os.environ["DJANGO_SETTINGS_MODULE"] = "meiduo_mall_admin.settings.dev"
 
     #将django环境生效
     import django
@@ -88,8 +88,8 @@ if __name__ == '__main__':
     from django.conf import settings
     from django.shortcuts import render
 
-    from meiduo_mall.utils.categories import get_categories
-    from meiduo_mall.utils.breadcrumb import get_breadcrumb
+    from meiduo_mall_admin.utils.categories import get_categories
+    from meiduo_mall_admin.utils.breadcrumb import get_breadcrumb
     from goods.models import SKU
 
     # 查询所有商品数据

@@ -2,7 +2,7 @@ from celery import Celery
 import os
 
 # 读取django项目的配置
-os.environ["DJANGO_SETTINGS_MODULE"] = "meiduo_mall.settings.dev"
+os.environ["DJANGO_SETTINGS_MODULE"] = "meiduo_mall_admin.settings.dev"
 
 # 创建celery对象
 app = Celery('meiduo')

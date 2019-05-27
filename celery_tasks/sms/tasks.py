@@ -1,5 +1,5 @@
 from celery_tasks.main import app
-from meiduo_mall.libs.yuntongxun.sms import CCP
+from meiduo_mall_admin.libs.yuntongxun.sms import CCP
 from . import constants
 
 

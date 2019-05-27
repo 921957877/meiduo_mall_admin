@@ -1,7 +1,7 @@
 /*
  Navicat MySQL Data Transfer
 
- Source Server         : meiduo_mall
+ Source Server         : meiduo_mall_admin
  Source Server Type    : MySQL
  Source Server Version : 50725
  Source Host           : 192.168.203.151:3306
