@@ -4,8 +4,8 @@ from goods.models import SKU, SKUSpecification, GoodsCategory, SPU, SPUSpecifica
 
 # 自定义序列化器，用来序列化从表数据集SKUSpecification
 class SKUSpecSerializer(serializers.ModelSerializer):
-    spec_id = serializers.IntegerField(read_only=True)
-    option_id = serializers.IntegerField(read_only=True)
+    spec_id = serializers.IntegerField()
+    option_id = serializers.IntegerField()
 
     class Meta:
         model = SKUSpecification
@@ -20,7 +20,34 @@ class SKUSerializer(serializers.ModelSerializer):
     category_id = serializers.IntegerField()
 
     # 从表的数据集
-    specs = SKUSpecSerializer(many=True, read_only=True)
+    specs = SKUSpecSerializer(many=True)
+
+    # 重写create方法,使保存sku时sku的规格和选项也进行保存
+    def create(self, validated_data):
+        # 提取规格和选项信息  specs: [{spec_id: "4", option_id: 8}, {spec_id: "5", option_id: 11}]
+        specs = validated_data.pop('specs')
+        # 创建sku对象
+        sku = self.Meta.model.objects.create(**validated_data)
+        # 遍历规格和选项信息,逐个进行保存
+        for i in specs:
+            # {spec_id: "5", option_id: 11}
+            # 拼接SKUSpecification中间表的数据
+            i['sku_id'] = sku.id
+            SKUSpecification.objects.create(**i)
+        return sku
+
+    # 重写update方法,使更新sku时sku的规格和选项也进行更新
+    def update(self, instance, validated_data):
+        # 提取规格和选项信息  specs: [{spec_id: "4", option_id: 8}, {spec_id: "5", option_id: 11}]
+        specs = validated_data.pop('specs')
+        # 遍历规格和选项信息,逐个进行更新
+        for i in specs:
+            # {spec_id: "4", option_id: 8}
+            # 根据sku_id和spec_id获得唯一的一条信息进行更新
+            skuspecification = SKUSpecification.objects.get(sku_id=instance.id, spec_id=i.get('spec_id'))
+            skuspecification.option_id = i.get('option_id')
+            skuspecification.save()
+        return instance
 
     class Meta:
         model = SKU

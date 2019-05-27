@@ -85,6 +85,7 @@ class SPU(BaseModel):
     def __str__(self):
         return self.name
 
+
 class SPUSpecification(BaseModel):
     """商品SPU规格"""
     spu = models.ForeignKey(SPU, on_delete=models.CASCADE, related_name='specs', verbose_name='商品SPU')
@@ -98,6 +99,7 @@ class SPUSpecification(BaseModel):
     def __str__(self):
         return '%s: %s' % (self.spu.name, self.name)
 
+
 class SpecificationOption(BaseModel):
     """规格选项"""
     spec = models.ForeignKey(SPUSpecification, related_name='options', on_delete=models.CASCADE, verbose_name='规格')
@@ -110,7 +112,6 @@ class SpecificationOption(BaseModel):
 
     def __str__(self):
         return '%s - %s' % (self.spec, self.value)
-
 
 
 class SKU(BaseModel):
@@ -138,7 +139,6 @@ class SKU(BaseModel):
         return '%s: %s' % (self.id, self.name)
 
 
-
 class SKUSpecification(BaseModel):
     """SKU具体规格"""
     sku = models.ForeignKey(SKU, related_name='specs', on_delete=models.CASCADE, verbose_name='sku')
@@ -152,7 +152,6 @@ class SKUSpecification(BaseModel):
 
     def __str__(self):
         return '%s: %s - %s' % (self.sku, self.spec.name, self.option.value)
-
 
 
 class SKUImage(BaseModel):
