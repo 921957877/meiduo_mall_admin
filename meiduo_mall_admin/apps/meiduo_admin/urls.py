@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from rest_framework.routers import SimpleRouter
 from rest_framework_jwt.views import obtain_jwt_token
 
 from meiduo_admin.views.brand_views import BrandView
 from meiduo_admin.views.channel_views import GoodsChannelView
 from meiduo_admin.views.data_views import *
+from meiduo_admin.views.image_views import SKUImageView, SKUSimpleView
 from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
 from meiduo_admin.views.specs_views import SPUSpecView
 from meiduo_admin.views.spu_views import SPUView, BrandSimpleView, SPUCategoryView
@@ -88,4 +90,14 @@ urlpatterns = [
     url(r'^goods/brands/$', BrandView.as_view({'get': 'list', 'post': 'create'})),
     # 删除,获取,更新一个商品品牌信息
     url(r'^goods/brands/(?P<pk>\d+)/$', BrandView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
+    # # 获取,新建图片信息
+    # url(r'^skus/images/$', SKUImageView.as_view({'get': 'list', 'post': 'create'})),
+    # # 删除,获取,更新一个图片信息
+    # url(r'^skus/images/(?P<pk>\d+)/$', SKUImageView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
+    # 获取简单的sku信息
+    url(r'^skus/simple/$', SKUSimpleView.as_view()),
 ]
+
+router = SimpleRouter()
+router.register('skus/images', SKUImageView, 'images')
+urlpatterns += router.urls
