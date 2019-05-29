@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework_jwt.views import obtain_jwt_token
 
+from meiduo_admin.views.brand_views import BrandView
 from meiduo_admin.views.channel_views import GoodsChannelView
 from meiduo_admin.views.data_views import *
 from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
@@ -83,5 +84,8 @@ urlpatterns = [
     url(r'^goods/channel_types/$', GoodsChannelView.as_view({'get': 'get_goodschannelgroup'})),
     # 获取一级分类信息
     url(r'^goods/categories/$', GoodsChannelView.as_view({'get': 'get_goodscategory'})),
-
+    # 获取,新建商品品牌信息
+    url(r'^goods/brands/$', BrandView.as_view({'get': 'list', 'post': 'create'})),
+    # 删除,获取,更新一个商品品牌信息
+    url(r'^goods/brands/(?P<pk>\d+)/$', BrandView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
 ]
