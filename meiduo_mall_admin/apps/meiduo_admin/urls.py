@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework_jwt.views import obtain_jwt_token
 
+from meiduo_admin.views.channel_views import GoodsChannelView
 from meiduo_admin.views.data_views import *
 from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
 from meiduo_admin.views.specs_views import SPUSpecView
@@ -73,5 +74,14 @@ urlpatterns = [
         SpecOptView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
     # 获取SPU规格的简单信息
     url(r'^goods/specs/simple/$', SPUSpecSimpleView.as_view()),
+    # 获取,创建频道信息
+    url(r'^goods/channels/$', GoodsChannelView.as_view({'get': 'list', 'post': 'create'})),
+    # 删除,获取,更新一个频道信息
+    url(r'^goods/channels/(?P<pk>\d+)/$',
+        GoodsChannelView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
+    # 获取频道组信息
+    url(r'^goods/channel_types/$', GoodsChannelView.as_view({'get': 'get_goodschannelgroup'})),
+    # 获取一级分类信息
+    url(r'^goods/categories/$', GoodsChannelView.as_view({'get': 'get_goodscategory'})),
 
 ]
