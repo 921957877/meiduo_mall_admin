@@ -31613,3 +31613,83 @@ INFO 2019-05-30 16:12:39,037 basehttp 124 "OPTIONS /meiduo_admin/orders/20190406
 INFO 2019-05-30 16:12:39,335 basehttp 124 "PUT /meiduo_admin/orders/20190406122652000000001/status/ HTTP/1.1" 200 87
 INFO 2019-05-30 16:12:39,522 basehttp 124 "GET /meiduo_admin/orders/20190406122652000000001/ HTTP/1.1" 200 416
 INFO 2019-05-30 16:12:52,798 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+INFO 2019-05-30 16:54:32,559 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-05-30 16:54:33,006 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+INFO 2019-05-30 16:54:35,742 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-05-30 16:54:35,748 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-05-30 16:54:35,758 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+WARNING 2019-05-30 16:54:35,831 base 152 Not Found: /meiduo_admin/permission/content_types/
+WARNING 2019-05-30 16:54:35,835 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 404 14911
+WARNING 2019-05-30 16:54:35,856 base 152 Not Found: /meiduo_admin/permission/content_types/
+WARNING 2019-05-30 16:54:35,857 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 404 14911
+INFO 2019-05-30 16:54:36,270 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 669
+INFO 2019-05-30 16:55:06,001 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+WARNING 2019-05-30 16:55:07,820 base 152 Not Found: /meiduo_admin/permission/content_types/
+WARNING 2019-05-30 16:55:07,823 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 404 14911
+WARNING 2019-05-30 16:55:07,865 base 152 Not Found: /meiduo_admin/permission/content_types/
+WARNING 2019-05-30 16:55:07,868 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 404 14911
+INFO 2019-05-30 16:55:07,912 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 706
+INFO 2019-05-30 16:55:34,288 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=6&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-05-30 16:55:34,397 basehttp 124 "GET /meiduo_admin/permission/perms/?page=6&pagesize=10&ordering=id HTTP/1.1" 200 778
+INFO 2019-05-30 17:08:32,978 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-05-30 17:08:33,273 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+INFO 2019-05-30 17:08:35,271 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:08:35,294 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:08:35,295 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-05-30 17:08:35,494 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 706
+INFO 2019-05-30 17:08:35,496 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:08:35,596 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:20:49,627 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:20:49,627 basehttp 124 "OPTIONS /meiduo_admin/permission/simple/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:20:49,635 basehttp 124 "OPTIONS /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-05-30 17:20:49,822 base 152 Not Found: /meiduo_admin/permission/groups/
+WARNING 2019-05-30 17:20:49,849 basehttp 124 "GET /meiduo_admin/permission/groups/?page=1&pagesize=10 HTTP/1.1" 404 15101
+WARNING 2019-05-30 17:20:49,868 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-05-30 17:20:49,872 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 15078
+WARNING 2019-05-30 17:20:49,918 base 152 Not Found: /meiduo_admin/permission/simple/
+WARNING 2019-05-30 17:20:49,919 basehttp 124 "GET /meiduo_admin/permission/simple/ HTTP/1.1" 404 15078
+INFO 2019-05-30 17:20:50,515 basehttp 124 "OPTIONS /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-05-30 17:20:50,691 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+INFO 2019-05-30 17:20:52,886 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:20:52,903 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-05-30 17:20:52,910 basehttp 124 "OPTIONS /meiduo_admin/permission/content_types/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:20:53,049 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:20:53,133 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 706
+INFO 2019-05-30 17:20:53,178 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:21:08,427 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:21:08,729 basehttp 124 "POST /meiduo_admin/permission/perms/ HTTP/1.1" 201 48
+INFO 2019-05-30 17:21:08,877 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 706
+INFO 2019-05-30 17:21:11,732 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-05-30 17:21:11,845 basehttp 124 "GET /meiduo_admin/permission/perms/?page=2&pagesize=10&ordering=id HTTP/1.1" 200 697
+INFO 2019-05-30 17:21:12,830 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=3&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-05-30 17:21:12,917 basehttp 124 "GET /meiduo_admin/permission/perms/?page=3&pagesize=10&ordering=id HTTP/1.1" 200 820
+INFO 2019-05-30 17:21:13,557 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 0
+INFO 2019-05-30 17:21:13,646 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 469
+INFO 2019-05-30 17:26:29,006 basehttp 124 "OPTIONS /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-05-30 17:26:29,230 basehttp 124 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 11057
+INFO 2019-05-30 17:26:32,435 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+INFO 2019-05-30 17:26:34,332 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:26:34,379 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 706
+INFO 2019-05-30 17:26:34,474 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:26:38,481 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/1/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:26:39,346 basehttp 124 "GET /meiduo_admin/permission/perms/1/ HTTP/1.1" 200 61
+INFO 2019-05-30 17:26:42,963 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 469
+INFO 2019-05-30 17:26:44,352 basehttp 124 "OPTIONS /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 0
+INFO 2019-05-30 17:26:44,508 basehttp 124 "GET /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 48
+INFO 2019-05-30 17:27:32,870 basehttp 124 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 230
+INFO 2019-05-30 17:27:34,416 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:27:34,429 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 876
+INFO 2019-05-30 17:27:34,502 basehttp 124 "GET /meiduo_admin/permission/content_types/ HTTP/1.1" 200 775
+INFO 2019-05-30 17:27:36,971 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 576
+INFO 2019-05-30 17:27:38,607 basehttp 124 "GET /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 65
+INFO 2019-05-30 17:28:01,297 basehttp 124 "POST /meiduo_admin/permission/perms/ HTTP/1.1" 201 65
+INFO 2019-05-30 17:28:01,512 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 876
+INFO 2019-05-30 17:28:04,781 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 642
+INFO 2019-05-30 17:28:07,248 basehttp 124 "GET /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 65
+INFO 2019-05-30 17:28:14,430 basehttp 124 "PUT /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 68
+INFO 2019-05-30 17:28:14,564 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 876
+INFO 2019-05-30 17:28:16,977 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 645
+INFO 2019-05-30 17:28:18,466 basehttp 124 "GET /meiduo_admin/permission/perms/76/ HTTP/1.1" 200 68
+INFO 2019-05-30 17:28:23,474 basehttp 124 "DELETE /meiduo_admin/permission/perms/76/ HTTP/1.1" 204 0
+INFO 2019-05-30 17:28:23,628 basehttp 124 "GET /meiduo_admin/permission/perms/?page=1&pagesize=10&ordering=id HTTP/1.1" 200 876
+INFO 2019-05-30 17:28:25,762 basehttp 124 "GET /meiduo_admin/permission/perms/?page=8&pagesize=10&ordering=id HTTP/1.1" 200 576

@@ -24,6 +24,7 @@ from meiduo_admin.views.data_views import *
 from meiduo_admin.views.image_views import SKUImageView, SKUSimpleView
 from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
 from meiduo_admin.views.order_views import OrderInfoView
+from meiduo_admin.views.permission_views import PermissionView, ContentTypeView
 from meiduo_admin.views.specs_views import SPUSpecView
 from meiduo_admin.views.spu_views import SPUView, BrandSimpleView, SPUCategoryView
 from meiduo_admin.views.user_views import *
@@ -103,6 +104,13 @@ urlpatterns = [
     url(r'^orders/(?P<pk>\d+)/$', OrderInfoView.as_view({'get': 'retrieve'})),
     # 修改订单表状态
     url(r'^orders/(?P<pk>\d+)/status/$', OrderInfoView.as_view({'put': 'partial_update'})),
+    # 获取,保存权限数据
+    url(r'^permission/perms/$', PermissionView.as_view({'get': 'list', 'post': 'create'})),
+    # 获取权限类型
+    url(r'^permission/content_types/$', ContentTypeView.as_view()),
+    # 获取,修改,删除一个权限数据
+    url(r'^permission/perms/(?P<pk>\d+)/$',
+        PermissionView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
 ]
 
 router = SimpleRouter()
