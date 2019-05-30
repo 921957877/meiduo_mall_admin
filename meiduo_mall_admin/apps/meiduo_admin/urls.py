@@ -18,6 +18,7 @@ from django.contrib import admin
 from rest_framework.routers import SimpleRouter
 from rest_framework_jwt.views import obtain_jwt_token
 
+from meiduo_admin.views.admin_views import AdminView, GroupSimpleView
 from meiduo_admin.views.brand_views import BrandView
 from meiduo_admin.views.channel_views import GoodsChannelView
 from meiduo_admin.views.data_views import *
@@ -119,6 +120,13 @@ urlpatterns = [
         GroupView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
     # 获取权限表的简单数据
     url(r'^permission/simple/$', PermissionSimpleView.as_view()),
+    # 获取,增加管理员数据
+    url(r'^permission/admins/$', AdminView.as_view({'get': 'list', 'post': 'create'})),
+    # 获取,修改,删除一个管理员数据
+    url(r'^permission/admins/(?P<pk>\d+)/$',
+        AdminView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+    # 获取用户分组简单的信息
+    url(r'^permission/groups/simple/$', GroupSimpleView.as_view()),
 ]
 
 router = SimpleRouter()
