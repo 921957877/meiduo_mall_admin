@@ -21,6 +21,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 from meiduo_admin.views.brand_views import BrandView
 from meiduo_admin.views.channel_views import GoodsChannelView
 from meiduo_admin.views.data_views import *
+from meiduo_admin.views.group_views import GroupView, PermissionSimpleView
 from meiduo_admin.views.image_views import SKUImageView, SKUSimpleView
 from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
 from meiduo_admin.views.order_views import OrderInfoView
@@ -111,6 +112,13 @@ urlpatterns = [
     # 获取,修改,删除一个权限数据
     url(r'^permission/perms/(?P<pk>\d+)/$',
         PermissionView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+    # 获取,保存用户组数据
+    url(r'^permission/groups/$', GroupView.as_view({'get': 'list', 'post': 'create'})),
+    # 获取,更新,删除单个用户组数据
+    url(r'^permission/groups/(?P<pk>\d+)/$',
+        GroupView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+    # 获取权限表的简单数据
+    url(r'^permission/simple/$', PermissionSimpleView.as_view()),
 ]
 
 router = SimpleRouter()
