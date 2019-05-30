@@ -23,6 +23,7 @@ from meiduo_admin.views.channel_views import GoodsChannelView
 from meiduo_admin.views.data_views import *
 from meiduo_admin.views.image_views import SKUImageView, SKUSimpleView
 from meiduo_admin.views.option_views import SpecOptView, SPUSpecSimpleView
+from meiduo_admin.views.order_views import OrderInfoView
 from meiduo_admin.views.specs_views import SPUSpecView
 from meiduo_admin.views.spu_views import SPUView, BrandSimpleView, SPUCategoryView
 from meiduo_admin.views.user_views import *
@@ -96,6 +97,12 @@ urlpatterns = [
     # url(r'^skus/images/(?P<pk>\d+)/$', SKUImageView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
     # 获取简单的sku信息
     url(r'^skus/simple/$', SKUSimpleView.as_view()),
+    # 获取订单信息
+    url(r'^orders/$', OrderInfoView.as_view({'get': 'list'})),
+    # 获取订单详细信息
+    url(r'^orders/(?P<pk>\d+)/$', OrderInfoView.as_view({'get': 'retrieve'})),
+    # 修改订单表状态
+    url(r'^orders/(?P<pk>\d+)/status/$', OrderInfoView.as_view({'put': 'partial_update'})),
 ]
 
 router = SimpleRouter()
