@@ -46,8 +46,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="176">
               <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+=======
+            <state relative-caret-position="3570">
+              <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
               <folding>
                 <element signature="e#651#692#0" expanded="true" />
               </folding>
@@ -55,11 +60,28 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/serializers/order_serializer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/serializers/admin_serializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -70,8 +92,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/views/order_views.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="74">
               <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+=======
+            <state relative-caret-position="204">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -172,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,7 +211,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,7 +221,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="settings.github" />
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -334,17 +365,38 @@
       <option name="presentableId" value="Default" />
       <updated>1558937816010</updated>
       <workItem from="1558937820276" duration="23295000" />
+<<<<<<< HEAD
       <workItem from="1559089210489" duration="41063000" />
+=======
+      <workItem from="1559089210489" duration="41912000" />
+      <workItem from="1559271609624" duration="236000" />
     </task>
+    <task id="LOCAL-00001" summary="测试pycharm的git功能">
+      <created>1559271788750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559271788750</updated>
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="64358000" />
+=======
+    <option name="totallyTimeSpent" value="65443000" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24812433" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25133976" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -356,9 +408,15 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32953367" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32953367" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.29740933" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3357513" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29637307" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -370,6 +428,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -396,6 +464,24 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试pycharm的git功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试pycharm的git功能" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/meiduo_mall_admin$manage.coverage" NAME="manage Coverage Results" MODIFIED="1559279484503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -770,12 +856,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/views/admin_views.py">
+    <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="166">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+=======
+        <state relative-caret-position="3570">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#651#692#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,24 +882,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/serializers/admin_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="188">
           <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+=======
+        <state relative-caret-position="442">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
           <folding>
             <element signature="e#651#692#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/views/admin_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/meiduo_mall_admin/apps/meiduo_admin/serializers/order_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -839,6 +945,15 @@
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> a44a02b2b1751f9f6b29eeac67482692c2a08e07
   </component>
   <component name="masterDetails">
     <states>
