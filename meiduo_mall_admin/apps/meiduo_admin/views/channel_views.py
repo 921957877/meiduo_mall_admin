@@ -1,5 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
+from rest_framework_extensions.cache.decorators import cache_response
 
 from goods.models import GoodsChannel, GoodsChannelGroup, GoodsCategory
 from meiduo_admin.pages import MyPage
@@ -12,6 +13,8 @@ class GoodsChannelView(ModelViewSet):
     serializer_class = GoodsChannelSerializer
     pagination_class = MyPage
 
+    # 增加缓存
+    @cache_response(timeout=200, cache='default')
     def get_goodschannelgroup(self, request):
         """获取频道组信息"""
         goodschannelgroup_queryset = GoodsChannelGroup.objects.all()
