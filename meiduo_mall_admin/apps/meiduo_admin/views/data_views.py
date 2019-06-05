@@ -1,10 +1,9 @@
-
-
 from rest_framework.views import APIView
-from datetime import date,datetime
+from datetime import date, datetime
 from users.models import User
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser
+
 
 # 获得用户总数
 # GET
@@ -16,7 +15,7 @@ class UserTotalCountView(APIView):
 
     def get(self, request):
         # 获得当前的查询日期
-        cur_date = date.today() # 2019-5-24
+        cur_date = date.today()  # 2019-5-24
 
         # 获得用户总数
         count = User.objects.count()
@@ -37,11 +36,13 @@ class UserTotalCountView(APIView):
 import pytz
 from django.conf import settings
 
+
 class UserDayIncrView(APIView):
     permission_classes = [IsAdminUser]
+
     def get(self, request):
         # 获得当前日期
-        cur_date = date.today() # 2019-5-26
+        cur_date = date.today()  # 2019-5-26
 
         # 2019-5-26 0:0:0  Asia/Shanghai
         cur_date = datetime(year=cur_date.year, month=cur_date.month, day=cur_date.day,
@@ -65,6 +66,7 @@ class UserDayIncrView(APIView):
 
 class UserDayActivateView(APIView):
     permission_classes = [IsAdminUser]
+
     def get(self, request):
         # 获得当前日期
         cur_date = date.today()
@@ -72,7 +74,7 @@ class UserDayActivateView(APIView):
                             hour=0, minute=0, second=0,
                             tzinfo=pytz.timezone(settings.TIME_ZONE))
         # 过滤出最后登陆的日期是当天
-        query =  User.objects.filter(last_login__gte=cur_date)
+        query = User.objects.filter(last_login__gte=cur_date)
         count = query.count()
         # 返回
         return Response({
@@ -82,8 +84,11 @@ class UserDayActivateView(APIView):
 
 
 from orders.models import OrderInfo
+
+
 class UserDayOrdersView(APIView):
     permission_classes = [IsAdminUser]
+
     def get(self, request):
         # 获得当天日期
         cur_date = date.today()
@@ -95,8 +100,7 @@ class UserDayOrdersView(APIView):
         # 已知条件是从表条件还是主表条件
         # 1、从从表入手； 2、从主表入手查询
 
-
-        # 从从表入手查询： 分2部
+        # 从从表入手查询： 分2步
         # 第一步：找从表对象
         # 第二步：在从表对象中找主表对象
         # # 根据日期，过滤出所有订单
@@ -108,7 +112,6 @@ class UserDayOrdersView(APIView):
         #
         # # 在所有订单中找出用户，统计用户数据, 去重
         # count = len(set(user_list))
-
 
         # 从主表入手
         # 已知条件：订单创建日期（从表）
@@ -125,18 +128,16 @@ class UserDayOrdersView(APIView):
         })
 
 
-
-
-
-
-
 # 统计最近30天，每一天新增用户量
 # GET
 # 参数token
 # 返回数据
 from datetime import timedelta
+
+
 class UserMonthIncrView(APIView):
     permission_classes = [IsAdminUser]
+
     def get(self, request):
         # 获得当天日期
         cur_date = date.today()
@@ -151,15 +152,15 @@ class UserMonthIncrView(APIView):
 
         user_list = []
         # 遍历这30天，统计每一天用户增量
-        for index in range(30): # 0,1,2,3,4,5....29
+        for index in range(30):  # 0,1,2,3,4,5....29
             # calc_date就是用于计算用户增量的那一天！
             calc_date = start_date + timedelta(days=index)
 
             # calc_date:  4-25
             # 4-25 0：0：0    <=  User.create_time   <  4-26 0:0:0
             count = User.objects.filter(date_joined__gte=calc_date,
-                                date_joined__lt=calc_date+timedelta(days=1)
-                                ).count()
+                                        date_joined__lt=calc_date + timedelta(days=1)
+                                        ).count()
 
             data = {
                 "count": count,
@@ -168,20 +169,18 @@ class UserMonthIncrView(APIView):
 
             user_list.append(data)
 
-
         # 构建数据返回
         return Response(user_list)
-
-
-
 
 
 from rest_framework import serializers
 from goods.models import GoodsVisitCount
 from rest_framework.generics import ListAPIView
 
+
 class GoodsVisitCountSerializer(serializers.ModelSerializer):
     category = serializers.StringRelatedField(read_only=True)
+
     class Meta:
         model = GoodsVisitCount
         fields = ["count", "category"]
@@ -193,15 +192,5 @@ class GoodsVisitView(ListAPIView):
     queryset = GoodsVisitCount.objects.all()
     serializer_class = GoodsVisitCountSerializer
 
-
     def get_queryset(self):
         return self.queryset.filter(date=date.today())
-
-
-
-
-
-
-
-
-

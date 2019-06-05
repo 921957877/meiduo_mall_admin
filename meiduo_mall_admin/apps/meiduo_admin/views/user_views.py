@@ -1,6 +1,3 @@
-
-
-
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView,CreateAPIView
 from users.models import User

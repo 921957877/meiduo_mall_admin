@@ -95,9 +95,9 @@ urlpatterns = [
     # 删除,获取,更新一个商品品牌信息
     url(r'^goods/brands/(?P<pk>\d+)/$', BrandView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
     # # 获取,新建图片信息
-    # url(r'^skus/images/$', SKUImageView.as_view({'get': 'list', 'post': 'create'})),
+    url(r'^skus/images/$', SKUImageView.as_view({'get': 'list', 'post': 'create'})),
     # # 删除,获取,更新一个图片信息
-    # url(r'^skus/images/(?P<pk>\d+)/$', SKUImageView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
+    url(r'^skus/images/(?P<pk>\d+)/$', SKUImageView.as_view({'delete': 'destroy', 'get': 'retrieve', 'put': 'update'})),
     # 获取简单的sku信息
     url(r'^skus/simple/$', SKUSimpleView.as_view()),
     # 获取订单信息

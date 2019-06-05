@@ -67,7 +67,7 @@ INSTALLED_APPS = [
 
     # 'haystack',
     'django_crontab',  # 定时任务
-    'corsheaders',
+    'corsheaders',  # 跨域CORS
 
     'meiduo_admin.apps.MeiduoAdminConfig',
 ]
@@ -327,7 +327,7 @@ CRONJOBS = [
 ]
 CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'  # 支持中文
 
-# CORS 白名单
+# CORS 白名单  凡是出现在白名单中的域名,都可以访问后端接口
 CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:8080',
     'localhost:8080',
@@ -349,8 +349,8 @@ JWT_AUTH = {
     # timedelta  -- 一个时间段
     # datetime -- 一个时间点
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'meiduo_admin.utils.response_handler.jwt_response_payload_handler',
     # 指明一个函数，该函数返回的结果就是最终obtain_jwt_token返回的结果
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'meiduo_admin.utils.response_handler.jwt_response_payload_handler',
 }
 
 FDFS_CONF_PATH = os.path.join(BASE_DIR, 'utils/fdfs/client.conf')

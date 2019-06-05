@@ -1,7 +1,6 @@
 from django.conf import settings
 from fdfs_client.client import Fdfs_client
 from rest_framework import serializers
-
 from goods.models import Brand
 
 

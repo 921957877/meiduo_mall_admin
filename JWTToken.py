@@ -1,51 +1,42 @@
-
-
-
 import json
 import base64
 
-
-
 header = {
-  'typ': 'JWT',
-  'alg': 'HS256'
+    'typ': 'JWT',
+    'alg': 'HS256'
 }
 # "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 
 # 将字典转化成json（字符串）
-header = json.dumps(header) # string
+header = json.dumps(header)  # string
 # 将json字符串通过base64编码称一个可视化的长字符串（字节对象）
 header = base64.b64encode(header.encode())
 print("header: ", header)
 
-
 payload = {
-  "sub": "1234567890",
-  "name": "John Doe",
-  "admin": True,
+    "sub": "1234567890",
+    "name": "John Doe",
+    "admin": True,
 }
 payload = json.dumps(payload)
 payload = base64.b64encode(payload.encode())
 print("payload: ", payload)
 
-
 # 组织要加密的数据
 msg = header + b'.' + payload
 
 # sha256加密生成签名部分
-import hmac,hashlib
+import hmac, hashlib
+
 SECRET_KEY = b'j*h(69kj^)ofyw+re!3!fpsh28a^wnm9iv1xv@9mi%^$)(dgm='
 hmacobj = hmac.new(SECRET_KEY, msg=msg, digestmod=hashlib.sha256)
 signature = hmacobj.hexdigest()
 print("signature: ", signature)
 
-
 # 得到的完整JWTTOken值是说明？
 # 是后台生成，并交给浏览器的
 JWT_Token = header.decode() + '.' + payload.decode() + '.' + signature
 print("JWT_Token: ", JWT_Token)
-
-
 
 # 下面的逻辑模拟后台接受浏览器token 值然后进行校验的逻辑
 # 下一次浏览器在请求的时候，会携带这个Token值
@@ -71,21 +62,10 @@ if new_signature == signature_from_font:
     print("数据完整，未被篡改！")
 
     # 提取用户数据
-    payload = base64.b64decode(payload_from_font.encode()) # json格式
+    payload = base64.b64decode(payload_from_font.encode())  # json格式
     print(payload, type(payload))
 
     payload = json.loads(payload.decode())
     print(payload, type(payload))
 else:
     print("数据被篡改了！")
-
-
-
-
-
-
-
-
-
-
-

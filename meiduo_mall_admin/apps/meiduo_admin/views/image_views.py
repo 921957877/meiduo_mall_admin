@@ -1,6 +1,5 @@
 from rest_framework.generics import ListAPIView
 from rest_framework.viewsets import ModelViewSet
-
 from goods.models import SKUImage, SKU
 from meiduo_admin.pages import MyPage
 from meiduo_admin.serializers.image_serializer import SKUImageSerializer, SKUSimpleSerializer

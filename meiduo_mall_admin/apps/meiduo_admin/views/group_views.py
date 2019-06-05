@@ -1,7 +1,6 @@
 from django.contrib.auth.models import Group, Permission
 from rest_framework.generics import ListAPIView
 from rest_framework.viewsets import ModelViewSet
-
 from meiduo_admin.pages import MyPage
 from meiduo_admin.serializers.group_serializer import GroupSerializer, PermissionSimpleSerializer
 
